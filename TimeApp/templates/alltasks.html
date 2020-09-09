@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="col-md-12">
+    <h1 class="text-center">All TASKS</h1><br><hr>
+
+    <form method="get" action="/search/" class="form-inline active-cyan-4">
+        <input class="form-control form-control-lg mr-3 w-75" type="text" placeholder="Search Task"
+               aria-label="Search" name="=search" id="search">
+        <i class="fas fa-search" aria-hidden="true"></i>
+    </form>
+
+    <div class="card card-body ">
+        <table class="table table-sm ">
+            <tr>
+                <th>Task</th>
+                <th>Created On</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Status</th>
+            </tr>
+            {% for i in tallset %}
+            <tr>
+                <td> {{ i.name }}</td>
+                <td> {{ i.projects }}</td>
+                <td> {{ i.start }}</td>
+                <td> {{ i.end }}</td>
+                <td> {{ i.status }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+{% endblock %}

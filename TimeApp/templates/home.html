@@ -1,0 +1,23 @@
+
+    <!--HomePage-->
+
+
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+
+<!--	Below Include provides the data of No of tasks -->
+{% include 'overall.html' %}
+
+ <div class="row">
+	<div class="col-md-12">
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-lg btn-block " href="{% url 'create' %}">Create Task</a>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
